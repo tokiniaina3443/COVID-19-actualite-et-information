@@ -1,0 +1,80 @@
+﻿@{
+    Article article =(Article) ViewData["article"];
+    ViewData["Title"] = article.Titre;
+    ViewData["description"] = article.Description;
+}
+
+
+<!-- header
+    ================================================== -->
+<header class="s-header">
+
+    <div class="header-logo">
+        <a class="site-logo" href="@Url.Action("actualite-1.html", "Accueil")" style="color: aliceblue;">Actualités</a>
+    </div>
+
+    <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+
+</header> <!-- end s-header -->
+
+
+<article class="blog-single">
+
+    <!-- page header/blog hero
+    ================================================== -->
+    <div class="page-header page-header--single page-hero" style="background-image:url(/images/fondActu.jpg)">
+
+        <div class="row page-header__content narrow">
+            <article class="col-full">
+                <h1 class="page-header__title">
+                    @article.Titre
+                </h1>
+                <ul class="page-header__meta">
+                    <li class="date">@article.Date</li>
+                    <li class="author">
+                        par
+                        <span>@article.Auteur</span>
+                    </li>
+                </ul>
+
+            </article>
+        </div>
+
+    </div> <!-- end page-header -->
+
+    <div class="row blog-content">
+        <div class="col-full blog-content__main">
+
+            <h2 class="lead">
+                @article.Description
+            </h2>
+
+
+            <div>
+                <img src="@article.Illustration.Chemin" style="max-width: 800px;min-width: 400px;" alt="@article.Illustration.Nom">
+            </div>
+            <h3>Large Heading</h3>
+
+            <h6>@article.Objet</h6>
+
+            <p class="blog-content__tags">
+                <span>Tags</span>
+                <span class="blog-content__tag-list">
+                    <a href="#0">Coronavirus</a>
+                    <a href="#0">Covid-19</a>
+                    <a href="#0">Vaccin</a>
+                </span>
+            </p>
+
+            <div class="blog-content__pagenav">
+                <div class="blog-content__all">
+                    <a href="@Url.Action("actualite-1.html", "Accueil")" class="btn btn--primary">
+                        Tous les actualités
+                    </a>
+                </div>
+            </div>
+
+        </div><!-- end blog-content__main -->
+    </div> <!-- end blog-content -->
+
+</article>

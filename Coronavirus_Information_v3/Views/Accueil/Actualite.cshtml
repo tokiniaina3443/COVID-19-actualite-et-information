@@ -1,0 +1,101 @@
+﻿@{
+    ViewData["Title"] = "Coronavirus, Actualité";
+    ViewData["description"] = "vous trouverez ici tous les actualités concernant le Coronavirus";
+    List<Article> articles = (List<Article>)ViewData["articles"];
+
+    int nbpage = (int)ViewData["nbpage"];
+    int pagenum = (int)ViewData["pageNum"];
+}
+
+<!-- header
+    ================================================== -->
+<header class="s-header">
+
+    <div class="header-logo">
+        <a class="site-logo" href="@Url.Action("Index", "Accueil")" style="color: aliceblue;">Accueil</a>
+    </div>
+
+    <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+
+</header> <!-- end s-header -->
+<!-- page header
+================================================== -->
+<section class="page-header page-hero" style="background-image:url(/images/fondActu2.jpg)">
+
+    <div class="row page-header__content">
+        <article class="col-full">
+            <h1 class="page-header__title">
+                Coronavirus Actualité
+            </h1>
+            <h2 style="color: aliceblue;">Vous trouveriez sur cette page toutes les actualité du coronavirus...</h2>
+        </article>
+    </div>
+
+</section> <!-- end page-header -->
+<!-- blog
+================================================== -->
+<section class="blog-content-wrap">
+
+    <div class="row blog-content">
+        <div class="col-full">
+
+            <div class="blog-list block-1-2 block-tab-full">
+
+                @{
+                    for (int i = 0; i < articles.Count; i++)
+                    {
+
+                        <article class="col-block">
+
+                            <div class="blog-date">
+                                <a href="@Url.Action("article-" + articles[i].Id + ".html", "Accueil")">@articles[i].Date</a>
+                            </div>
+
+                            <h2 class="h01"><a href="@Url.Action("article-" + articles[i].Id + ".html", "Accueil")">@articles[i].Titre</a></h2>
+                            <h5>
+                                @articles[i].Description
+                            </h5>
+
+                            @if(articles[i].Illustration != null)
+                            {
+                                <div class="blog-cat" style="margin-bottom: 5%;">
+                                    <img src="@articles[i].Illustration.Chemin" alt="@articles[i].Illustration.Nom">
+                                </div>
+                            }
+
+                            <div class="blog-cat" style="border-bottom: 1px solid gray;">
+                                <h6>@articles[i].Auteur</h6>
+                            </div>
+
+                        </article>
+                    }
+                }
+
+            </div> <!-- end blog-list -->
+
+        </div> <!-- end col-full -->
+    </div> <!-- end blog-content -->
+
+    <div class="row blog-entries-nav">
+        <div class="col-full">
+            @{
+                if(pagenum>1)
+                {
+                    <a href="@Url.Action("actualite-" + (pagenum-1).ToString() + ".html", "Accueil")" class="btn btn--stroke">
+                        <i class="im im-arrow-left"></i>
+                        Precedent
+                    </a>
+                }
+
+                if(pagenum<nbpage)
+                {
+                    <a href="@Url.Action("actualite-" + (pagenum+1).ToString() + ".html", "Accueil")" class="btn btn--stroke">
+                        Suivant
+                        <i class="im im-arrow-right"></i>
+                    </a>
+                }
+            }
+        </div>
+    </div>
+
+</section> <!-- end blog-content-wrap -->

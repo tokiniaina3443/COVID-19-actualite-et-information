@@ -1,0 +1,254 @@
+﻿@{
+    ViewData["Title"] = "Coronavirus, information et actualité";
+    ViewData["description"] = "Sur cette page, vous trouverez des informations et des conseils concernant la pandémie en cours de maladie à coronavirus 2019 (COVID-19) dont les premiers cas ont été signalés pour la première fois à Wuhan, en Chine, le 31 décembre 2019. Cette page est mise à jour quotidiennement.";
+}
+
+<header class="s-header">
+    <nav class="header-nav-wrap">
+        <ul class="header-nav">
+            <li><a class="smoothscroll" href="#home" title="home" style="color:white">Accueil</a></li>
+            <li><a class="smoothscroll" href="#def" title="def">Définition et Origine</a></li>
+            <li><a class="smoothscroll" href="#Symptome" title="Symptome">Symptôme</a></li>
+            <li><a class="smoothscroll" href="#Transmission" title="Transmission">Transmission</a></li>
+            <li><a class="smoothscroll" href="#Prevention" title="Prévention">Prévention</a></li>
+            <li><a class="smoothscroll" href="#Contact" title="Contact">Contact</a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">Plus</button>
+                    <div class="dropdown-content">
+                        <a href="@Url.Action("actualite-1.html")" style="color: black; font-size: 9px;">Actualité</a>
+                        <a href="#" style="color: black; font-size: 9px;">Statistique</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <a class="header-menu-toggle" href="#def"><span>Menu</span></a>
+</header>
+
+
+<section id="section1" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="images/accueil_bg.jpg" data-natural-width=3000 data-natural-height=1400 data-position-y=center>
+
+    <div class="overlay"></div>
+    <div class="shadow-overlay"></div>
+
+    <div class="home-content">
+
+        <div class="row home-content__main">
+
+            <h1>
+                Coronavirus ou Covid-19. <br>
+                Informations et <br>
+                actualités.
+            </h1>
+
+            <div class="home-content__scroll">
+                <a href="#def" class="scroll-link smoothscroll">
+                    <span>Scroller en bas</span>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <ul class="home-social">
+        <li>
+            <a href="#"><i class="im im-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+        </li>
+        <li>
+            <a href="#"><i class="im im-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+        </li>
+        <li>
+            <a href="#"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+        </li>
+        <li>
+            <a href="#"><i class="im im-behance" aria-hidden="true"></i><span>Behance</span></a>
+        </li>
+        <li>
+            <a href="#"><i class="im im-pinterest" aria-hidden="true"></i><span>Pinterest</span></a>
+        </li>
+    </ul>
+
+</section>
+
+
+<section id="section2" class="s-about target-section">
+
+    <div class="row narrow section-intro has-bottom-sep" id="def" style="padding-top: 2%;">
+        <div class="col-full text-center">
+            <h2>Un coronavirus, c'est quoi?</h2>
+            <h4 class="lead">Les <strong>coronavirus</strong> forment une famille de virus variés (Coronaviridae) qui peuvent infecter aussi bien l'homme que l'animal. Leur nom signifie "virus en couronne" et vient du fait qu'ils possèdent tous un aspect en forme de couronne lorsqu'ils sont observés au microscope.</h4>
+        </div>
+    </div>
+
+    <div class="row about-content">
+
+        <div class="col-six tab-full left">
+            <h3>Origine</h3>
+
+            <h5>
+                La COVID-19, un nouveau coronavirus
+                Le virus identifié en janvier 2020 en Chine est un nouveau coronavirus, nommé SARS-CoV-2. La maladie provoquée par ce coronavirus a été nommée COVID-19 par l’Organisation mondiale de la Santé - OMS. Depuis le 11 mars 2020, l’OMS qualifie la situation mondiale du COVID-19 de pandémie ; c’est-à-dire que l’épidémie est désormais mondiale.
+
+                Les coronavirus sont une famille de virus qui provoquent des maladies allant d’un simple rhume (certains virus saisonniers sont des coronavirus) à des pathologies plus sévères (comme les détresses respiratoires du MERS, du SRAS ou de la COVID-19).
+            </h5>
+            <h4><span>La dangerosité</span></h4>
+            La COVID-19 est un virus dangereux parce que :
+            <ul>
+                <li>il est très contagieux : chaque personne infectée va contaminer au moins 3 personnes en l'absence de mesures de protection </li>
+                <li>une personne contaminée mais qui ne ressent pas encore de symptômes peut contaminer d’autres personnes.</li>
+            </ul>
+        </div>
+
+        <div class="col-six tab-full right" style="padding-top: 5%;padding-left: 7%;">
+            <div class="origine_img">
+            </div>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="row about-content" id="Symptome" style="padding-top: 2%;">
+
+        <div class="col-six tab-full left" style="padding-top: 5%;padding-left: 9%;">
+            <div class="symptome_img">
+            </div>
+        </div>
+        <div class="col-six tab-full right">
+            <h3>Symptômes de la COVID‑19</h3>
+
+            <h5>
+                Les symptômes de la COVID‑19 peuvent varier d’une personne à l’autre. Ils peuvent aussi varier en fonction du groupe d’âge.
+                Voici quelques‑uns des symptômes les plus fréquemment signalés :
+            </h5>
+            <ul>
+                <li>apparition ou aggravation de toux</li>
+                <li>essoufflement ou difficulté respiratoire</li>
+                <li>sensation de fièvre</li>
+                <li>frissons</li>
+                <li>perte de l’odorat ou du goût</li>
+                <li>mal de tête</li>
+                <li>fatigue ou faiblesse</li>
+                <li>douleurs musculaires ou courbatures</li>
+            </ul>
+        </div>
+
+
+    </div>
+
+    <hr>
+
+    <div class="row about-content about-content--timeline" id="Transmission" style="padding-top: 2%;">
+
+        <div class="col-full text-center">
+            <h3>Transmission</h3>
+            <h5>Le virus se transmet lors des contacts étroits dans un espace confiné, à moins d'un mètre et/ou pendant plus de 15 minutes.</h5>
+        </div>
+
+        <div class="col-six tab-full left">
+            <div class="timeline">
+
+                <div class="timeline__block">
+                    <div class="timeline__bullet"></div>
+                    <div class="timeline__header">
+                        <h3>Par l'air</h3>
+                    </div>
+                    <div class="timeline__desc">
+                        <p>Les postillons propagés  lors d'une toux, d'un éternuement ou d'une discussion rapprochée.</p>
+                    </div>
+                    <div class="timeline__desc">
+                        <div class="transmission1_img"></div>
+                    </div>
+                </div> <!-- end timeline__block -->
+
+            </div> <!-- end timeline -->
+        </div> <!-- end left -->
+
+        <div class="col-six tab-full right">
+            <div class="timeline">
+
+                <div class="timeline__block">
+                    <div class="timeline__bullet"></div>
+                    <div class="timeline__header">
+                        <h3>Par des contacts physiques</h3>
+                    </div>
+                    <div class="timeline__desc">
+                        <p>Comme un poignée de main un baiser. Ou par des surfaces contaminées(poignées de porte, claviers, rampe d'escalier).</p>
+                    </div>
+                    <div class="timeline__desc">
+                        <div class="transmission2_img"></div>
+                    </div>
+                </div> <!-- end timeline__block -->
+            </div> <!-- end timeline -->
+        </div> <!-- end right -->
+
+    </div> <!-- end about-content timeline -->
+
+    <hr>
+
+    <div class="row about-content about-content--timeline" id="Prevention" style="padding-top: 2%;">
+
+        <div class="col-full text-center">
+            <h3>Prevention.</h3>
+        </div>
+
+        <div class="col-six tab-full left" style="text-align: left;">
+            <div style="display: inline-flex;"><div class="distance_icon" style="margin-top: 10%;margin-right: 2%;"></div> <h4>Respectez au maximum les mesures de distanciation sociales.</h4></div>
+            <div style="display: inline-flex;"><div class="mask_icon" style="margin-top: 25%;margin-right: 2%;"></div> <h4>Portez un masque.</h4></div>
+            <div style="display: inline-flex;"><div class="house_icon" style="margin-top: 13%;margin-right: 2%;"></div> <h4>Limitez les interactions sociales, certaines personnes transmettent le virus sans en ressentir les symptômes.</h4></div>
+            <div style="display: inline-flex;"><div class="wash_icon" style="margin-top: 13%;margin-right: 2%;"></div> <h4>Lavez-vous très régulièrement les mains.</h4></div>
+        </div> <!-- end left -->
+
+        <div class="col-six tab-full right" style="text-align: left;">
+            <div style="display: inline-flex;"><div class="cough_icon" style="margin-top: 10%;margin-right: 2%;"></div> <h4>Toussez ou éternuez dans votre coude ou dans un mouchoir.</h4></div>
+            <div style="display: inline-flex;"><div class="wave_icon" style="margin-top: 12%;margin-right: 2%;"></div> <h4>Saluez sans serrer la main, n'embrassez personne.</h4></div>
+            <div style="display: inline-flex;"><div class="tissue_icon" style="margin-top: 12%;margin-right: 2%;"></div> <h4>Utilisez un mouchoir à usage unique et jetez-le.</h4></div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section id="Contact" class="s-contact target-section">
+
+    <div class="overlay"></div>
+
+    <div class="row narrow section-intro">
+        <div class="col-full">
+            <h3>Contacte</h3>
+        </div>
+    </div>
+
+    <div class="row contact__main">
+
+        <div class="col-four tab-full contact__infos">
+            <h4 class="h06">Téléphone</h4>
+            <p>
+                telma: 034 12 345 67<br>
+                orange: 032 12 456 78<br>
+                airtel: 033 12 456 78
+            </p>
+        </div>
+        <div class="col-four tab-full contact__infos">
+            <h4 class="h06">Email</h4>
+            <p>
+                example@example.com<br>
+            </p>
+        </div>
+        <div class="col-four tab-full contact__infos">
+            <h4 class="h06">Addresse</h4>
+            <p>
+                1600 Amphitheatre Parkway<br>
+                Mountain View, CA<br>
+                94043 US
+            </p>
+        </div>
+
+    </div>
+
+</section>
