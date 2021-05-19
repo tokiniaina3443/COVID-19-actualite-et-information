@@ -273,31 +273,38 @@ namespace Coronavirus_Information_v3.Models
             return article;
         }
 
-        // fonction pour updater un artilce
-        public bool UpdateArticle()
+
+        public bool ModifierArticle()
         {
             bool ans = false;
             SqlConnection connection = DBConnection.Connect();
             connection.Open();
-            try
+            if (connection.State == ConnectionState.Open)
             {
-                if (connection != null)
+                SqlCommand command = null;
+                string sql = "UPDATE table SET titre = @titre, auteur = @auteur, date = @date, description = @description, objet = @objet WHERE id = @id ";
+                try
                 {
-                    string sql = "Update from Article set titre = @titre, auteur = @auteur";
-                    SqlCommand command = null;
                     command = new SqlCommand(sql, connection);
+                    command.Parameters.AddWithValue("@titre", this.Titre);
+                    command.Parameters.AddWithValue("@auteur", this.Auteur); ;
+                    command.Parameters.AddWithValue("@date", this.Date);
+                    command.Parameters.AddWithValue("@objet", this.Objet);
+                    command.Parameters.AddWithValue("@id", this.Id);
                     command.ExecuteNonQuery();
-
+                    ans = true;
                 }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
+                catch (Exception ex)
                 {
+                    ans = false;
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    if (command != null)
+                    {
+                        command.Dispose();
+                    }
                     connection.Close();
                 }
             }
